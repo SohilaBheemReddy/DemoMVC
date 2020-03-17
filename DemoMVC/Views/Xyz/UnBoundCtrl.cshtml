@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "UnBoundCtrl";
+}
+
+<h2>UnBoundCtrl</h2>
+
+@using (Html.BeginForm("UnBoundCtrl1","Xyz"))
+{
+    <table>
+        <tr>
+            <td>Empno</td>
+            <td>@Html.TextBox("txtEmpno")</td>
+
+        </tr>
+        <tr>
+            <td>Ename</td>
+            <td>@Html.TextBox("txtEname")</td>
+
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td>@Html.TextBox("txtSalary")</td>
+
+        </tr>
+
+    </table>
+    <input type="submit" />
+    if (ViewBag.msg != null)
+    {
+        <h3>@ViewBag.msg</h3>
+    }
+}

@@ -1,0 +1,67 @@
+﻿@model DemoMVC.Models.EMPDATA
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Update","Default1"))
+
+{
+<table>
+    <tr>
+        <td>Empno</td>
+        <td>@Html.TextBoxFor(a => a.EMPNO, "", new { onblur = "Func();" })</td>
+    </tr>
+    <tr>
+        <td>EName</td>
+        <td>@Html.TextBoxFor(a => a.ENAME)</td>
+    </tr>
+    <tr>
+        <td>Job</td>
+        <td>@Html.TextBoxFor(a => a.JOB)</td>
+    </tr>
+    <tr>
+        <td>Manager ID</td>
+        <td>@Html.TextBoxFor(a => a.MGR)</td>
+    </tr>
+    <tr>
+        <td>HireDate</td>
+        <td>@Html.TextBoxFor(a => a.HIREDATE)</td>
+    </tr>
+    <tr>
+        <td>SALARY</td>
+        <td>@Html.TextBoxFor(a => a.SAL)</td>
+    </tr>
+    <tr>
+        <td>COMM</td>
+        <td>@Html.TextBoxFor(a => a.COMM)</td>
+    </tr>
+    <tr>
+        <td>Deptno</td>
+        <td>@Html.TextBoxFor(a => a.DEPTNO)</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" />
+        </td>
+    </tr>
+</table>
+    if (ViewBag.S != null)
+    { 
+    @ViewBag.S
+    }
+}
+<script>
+    function Func()
+    {
+        var empno = document.getElementById("EMPNO").value;
+        alert(empno);
+        window.location.href = "/Default1/Extract?E=" + empno;
+
+    }
+
+
+</script>
+
+

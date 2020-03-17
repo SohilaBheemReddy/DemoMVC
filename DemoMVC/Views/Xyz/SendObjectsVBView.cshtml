@@ -1,0 +1,17 @@
+﻿@model IEnumerable<DemoMVC.Models.Emp>
+@{
+    ViewBag.Title = "SendObjectsVBView";
+}
+
+<h2>SendObjectsVBView</h2>
+
+@foreach (var E in Model)
+    { 
+<h2>
+    @E.Empno   @E.Ename    @E.Salary  <br />
+
+
+</h2>
+
+
+}

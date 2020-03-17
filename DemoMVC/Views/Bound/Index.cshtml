@@ -1,0 +1,36 @@
+﻿@model DemoMVC.Models.Emp
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+@using (Html.BeginForm("Display","Bound"))
+{ 
+<table>
+    <tr>
+        <td>Empno</td>
+        <td>
+            @Html.TextBoxFor(x => x.Empno)
+        </td>
+    </tr>
+    <tr>
+        <td>Ename</td>
+        <td>
+            @Html.TextBoxFor(x => x.Ename)
+        </td>
+    </tr>
+    <tr>
+        <td>Salary</td>
+        <td>
+            @Html.TextBoxFor(x => x.Salary)
+        </td>
+    </tr>
+    <tr><td><input type="submit" /></td></tr>
+    
+</table>
+
+
+
+}
+
+
+

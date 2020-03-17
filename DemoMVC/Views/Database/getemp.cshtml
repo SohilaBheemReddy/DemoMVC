@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "getemp";
+}
+
+<h2>getemp</h2>
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @ViewBag.a
+<table>
+    <tr>
+        <td>Number</td>
+        <td>@Html.TextBox("txtNumber1",new { @value = "Hello" },new {@onChange = "yourFunction()" })</td>
+    </tr>
+    <tr>
+        <td>Number</td>
+        <td>@Html.TextBox("txtNumber2",ViewBag.a)</td>
+    </tr>
+
+</table>
+}
+<script type='text/javascript'>
+    function yourFunction() {
+        window.location="/Database/getemp1"
+   }
+</script>

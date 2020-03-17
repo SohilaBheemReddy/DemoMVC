@@ -1,0 +1,40 @@
+﻿@model DemoMVC.Models.EmpSal
+@{
+    ViewBag.Title = "Extract";
+}
+
+<h2>Extract</h2>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>Empno</td>
+            <td>@Html.TextBoxFor(b => b.Empno, "", new { onblur = "func();" })</td>
+
+        </tr>
+        <tr>
+            <td>Ename</td>
+            <td>@Html.TextBoxFor(b=>b.Ename)</td>
+
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td>@Html.TextBoxFor(b=>b.Salary)</td>
+
+        </tr>
+
+    </table>
+   
+   
+}
+<script>
+    function func()
+    {
+        var eno = document.getElementById("Empno").value;
+        alert(eno);
+        window.location.href = "/Xyz/ExtractEmp?E=" + eno;
+
+    }
+
+</script>

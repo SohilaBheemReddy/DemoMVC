@@ -1,0 +1,33 @@
+﻿@model DemoMVC.Models.EmpSal
+@{
+    ViewBag.Title = "BoundCtrl";
+}
+
+<h2>BoundCtrl</h2>
+
+@using (Html.BeginForm())
+{ 
+<table>
+    <tr>
+        <td>Empno</td>
+        <td>@Html.TextBoxFor(a => a.Empno)</td>
+
+    </tr>
+    <tr>
+        <td>Ename</td>
+        <td>@Html.TextBoxFor(a => a.Ename)</td>
+
+    </tr>
+    <tr>
+        <td>Salary</td>
+        <td>@Html.TextBoxFor(a => a.Salary)</td>
+
+    </tr>
+
+</table>
+<input type="submit" />
+    if (ViewBag.msg != null)
+    { 
+    <h3>@ViewBag.msg</h3>
+    }
+}
